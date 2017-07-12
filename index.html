@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>bootable专注移动端</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+        <meta name="keywords" content="移动端，css，框架，布局"/>
+        <meta name="description" content="基于bootstrap，适合移动端的极简css框架" />
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" type="text/css" href="dist/css/bootable.min.css" />
+    </head>
+    <style type="text/css">
+        .code-block{
+            background-color:#272727;color:#fff;
+            border-radius:5px;
+            border:none;
+        }
+        pre{
+             white-space: pre-wrap!important;    /*保留空白，进行换行*/
+             word-wrap: break-word!important;
+        }
+    </style>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6495663011353487220a2878255d1bfc";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <body class="ft24 pl20 pr20" style="background-color:#efefef;">
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="ft36 lh150 text-center border-bottom">bootable专注移动端的css框架</h1>
+            </div>
+        </div>
+        <h2 class="ft30 lh80">1.继承bootstrap栅栏系统</h2>
+        
+        <div class="container-fluid ft24 pt10 pb10 code-block">
+            <p>container，container-fluid，fow</p>
+            <p>col-xs-*,col-sm-*,col-md-*,col-lg-*</p>
+            <p>col-xs-offset-*,col-sm-offset-*,col-md-offset-*,col-lg-offset-*</p>
+            <p>这些都是可以使用的</p>
+        </div>
+        <p class="text-red lh50">因为是针对移动端的，所以xs用的最多</p>
+        <p class="mt20">下面这些基本的文本操作和颜色也是可以使用的</p>
+        <pre class="container-fluid ft24 pt10 pb10 code-block">
+.text-left
+.text-right
+.text-center
+.text-justify 
+.text-nowrap    
+
+.text-lowercase      
+.text-uppercase     
+.text-capitalize    
+
+.text-muted
+.text-primary
+.text-success
+.text-info 
+.text-warning
+.text-danger
+
+.bg-primary
+.bg-success
+.bg-info
+.bg-warning
+.bg-danger
+        </pre>
+       
+        <p>demo:</p>
+        <div class="container-fluid">
+            <div class="row lh40 clearFix" style="color:#fff;">
+                <div class="col-xs-3 h40" style="background-color:#000;">col-xs-3</div>
+                <div class="col-xs-3 h40" style="background-color:green;">col-xs-3</div>
+                <div class="col-xs-3 h40" style="background-color:grey;">col-xs-3</div>
+                <div class="col-xs-3 h40" style="background-color:red;">col-xs-3</div>
+            </div>
+        </div>
+        <div class="container-fluid mt20">
+            <div class="row lh40 clearFix" style="color:#fff;">
+                <div class="col-xs-4 h40" style="background-color:#000;">col-xs-4</div>
+                <div class="col-xs-8 h40" style="background-color:green;">col-xs-8</div>
+            </div>
+        </div>
+        <h2 class="ft30 lh80 mt50">2.UI设计尺寸和rem的约定</h2>
+        <p >UI设计稿按照750像素设计,如下图</p>
+        <div>
+            <img src="./dist/img/pxtorem.png" alt="" class="wc" />
+        </div>
+        <p class="lh30 mt20">字体和尺寸我们的约定是：<br /></p>
+        <ol>
+            <li>1.对于iphone 6s以下的尺寸（device-width在320px~375px之间），统一按照iphone 6s的字体大小和布局高度</li>
+            <li>2.对于iphone 6s plus以上的尺寸（device-width:在414px~768px之间），在6s的基础上相应放大</li>
+            <li>3.对于ipad（device-width:在768px以上），再次放大</li>
+        </ol>
+        <pre class="container-fluid ft24 pt10 pb10 code-block">
+@media only screen and (min-device-width: 319px) {
+    html{
+        font-size:50px;
+    }
+}
+@media only screen and (min-device-width: 410px) {
+    html{
+        font-size:70px;
+    }
+}
+@media only screen and (min-device-width: 767px) {
+    html{
+        font-size:80px;
+    }
+}
+        </pre>
+        <p class="text-red">这样，如上图UI标注，40px，在css中按照0.4rem就可以了</p>
+        <p>在iphone6s就是 100%还原。在iphone6 plus就会对应放大一些。对于这个放大比例，可以在实际项目中调整上面的70px和80px</p>
+        <h2 class="ft30 lh80 mt50">3.原子化css类，提高开发效率</h2>
+        <p>bootable提供了一系列常用的css类，可以直接应用于元素</p>
+        <pre class="container-fluid ft24 pt10 pb10 code-block">
+.wc-------------width: 100%
+.hc-------------height: 100%
+.p-rel----------position:relative
+.p-abs----------position:absolute
+.p-stc----------position:static
+.p-fix----------position:fixed
+.ovh------------overflow: hidden
+.dib------------display:inline-block
+.vm-------------vertical-align:middle
+.vt-------------vertical-align:top
+.vtt------------vertical-align:text-top
+.vb-------------vertical-align:bottom
+.vtb------------vertical-align:text-bottom
+.mauto----------margin-left:auto;margin-right:auto
+.dn-------------display:none
+
+
+//以下的单位均是转换成rem的，所以UI图标注是多少，这里就是多少。入标注left:40px。那么就用left40
+.left0~left50-------left:*
+.top0~top50---------top:*
+.right0~right50-----right:*
+.bottom0~bottom50---bottom:*
+
+.mt0~mt50-----------margin-top:*
+.ml0~ml50-----------margin-left:*
+.mr0~mr50-----------margin-right:*
+.mb0~mb50-----------margin-bottom:*
+
+.pl0~pl50-----------padding-left:*
+.pr0~pr50-----------padding-right:*
+.pt0~pt50-----------padding-top:*
+.pb0~pb50-----------padding-bottom:*
+
+
+.w0,w5,w10~w250-----width:*//以5为间隔
+.h0,h5,h10~h250-----height:*
+.lh0,lh5~lh250------line-height:*
+        </pre>
+        <p>ps:设置一个宽200，高100，上内边距20，左内边距20的div。</p>
+        <div class="w200 h100 pt20 pl20 ft16" style="background-color:red;">&lt;div class="w200 h100 pt20 pl20"&gt;&lt;/div&gt;</div>
+
+        <h2 class="ft30 lh80 mt50">4.table-cell布局</h2>
+        <p>移动端弹性布局很多，一行多个并排元素，部分元素定宽，其他元素自动占位。</p>
+        <p>bootable提供div-table和div-table-cell来满足这种布局,如下图</p>
+        <div>
+            <img src="./dist/img/divtable.png" alt="" class="wc" />
+        </div>
+        <p class="mt10">代码如下</p>
+        <pre class="container-fluid ft24 pt10 pb10 code-block">
+&lt;div class="div-table"&gt;
+    &lt;div class="div-table-cell w120 text-right"&gt;标题&lt;/div&gt;
+    &lt;div class="div-table-cell"&gt;&lt;input type="text" class="dib wc" /&gt;&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+        <p class="mt10">效果</p>
+        <div class="div-table">
+            <div class="div-table-cell w120 text-right">标题</div>
+            <div class="div-table-cell"><input type="text" class="dib wc" /></div>
+        </div>
+
+        <h2 class="ft30 lh80 mt50">5.bootable优缺点</h2>
+        <p>优点：简洁高效，从bootstrap衍生而来。字体与布局采用同一个单位，排版统一。对于大屏幕设备字体支持良好</p>
+        <p>缺点：不支持pc端，没有采用flex布局用table-cell布局代替，不确定性能。</p>
+
+        <h2 class="ft30 lh80 mt50">6.bootable后续</h2>
+        <p>这里只集成了核心的css，后续会增加很多我们在实际开发者用到的很多插件，比如animatecss等，敬请期待</p>
+    </body>
+</html>
