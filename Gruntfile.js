@@ -70,46 +70,6 @@ module.exports = function (grunt) {
       }
 
     },
-    concat: {
-      options: {
-        separator: '\n'
-      },
-      myjs: {
-        src: 'src/js/*.js',
-        dest: 'dist/js/app.js'
-      },
-      //合并zepto,默认zepto  event  ajax form  ie fx fx_methods  touch这几个模块,想合并更多功能请自行添加
-      zepto: {
-        src: [
-          'src/js/zepto/zepto.js',
-          'src/js/zepto/event.js',
-          'src/js/zepto/ajax.js',
-          'src/js/zepto/form.js',
-          'src/js/zepto/ie.js',
-          'src/js/zepto/fx.js',
-          'src/js/zepto/fx_methods.js',
-          // 'src/js/zepto/touch.js',
-          'src/js/zepto/selector.js',
-          //'src/js/zepto/_tpl.js',//从undescore中提取模板库，很有用。所以合入zepto中
-          'src/js/zepto/fastclick.js',//点击延迟
-          'src/js/zepto/zepto.cookie.js'//tap事件点击穿透的解决方案
-        ],
-        dest: 'dist/js/zepto.min.js'
-      }
-    },
-    //压缩js
-    uglify: {
-         options: {
-          compress: {
-            drop_console: true
-          }
-         },
-         //压缩zepto
-         zepto:{
-            src: 'dist/js/zepto.min.js',
-            dest: 'dist/js/zepto.min.js'
-         }
-    },
     //css压缩合并
     cssmin: {
          options:{
@@ -119,22 +79,11 @@ module.exports = function (grunt) {
             src: basecss,
             dest: 'dist/css/bootable.min.css'
          }
-     },
-     copy: {
-      main: {
-        expand: true,
-        cwd: './dist/',
-        src: ['**'],
-        dest: '../server/static'
-      },
-    },
+     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-less') ;
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // 默认任务
   grunt.registerTask('build', ['less:compileCore','less:base','less:animate','cssmin:default']);
