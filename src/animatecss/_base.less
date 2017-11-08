@@ -1,0 +1,39 @@
+
+
+@speed:0.1s;
+@speed2:1s;
+.loop(@n) when (@n > 0) {
+    .animated.delay@{n}{
+        animation-delay:(@n*@speed) ;
+        -webkit-animation-delay:(@n*@speed) ;
+    }
+    //循环调用自身
+    .loop((@n - 1));
+}
+
+.animated {
+  animation-duration: @speed2;
+  -webkit-animation-duration: @speed2;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+  -webkit-animation-duration: .75s;
+}
+
+.loop(20);

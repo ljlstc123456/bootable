@@ -1,0 +1,123 @@
+//常用的定位css
+@margin-padding-unit:1rem;
+@margin-padding-spacing:1;
+@width-height-unit:5rem;
+@width-height-spacing:5;
+
+@length:50;
+//循环生成器
+.loop(@n,@min,@all,@spacing,@unit) when (@n >= 0) {
+    @unit2:(@n*@spacing) ;
+    .@{min}@{unit2}{
+        @{all}:(@n*@unit/100) !important;
+    }
+    //循环调用自身
+    .loop((@n - 1),@min,@all,@spacing,@unit);
+}
+.loop2(@n,@min,@all,@spacing,@unit) when (@n >= 0) {
+    @unit2:(@n*@spacing) ;
+    .@{min}@{unit2}{
+        @{all}:(@n*@unit) !important;
+    }
+    //循环调用自身
+    .loop2((@n - 1),@min,@all,@spacing,@unit);
+}
+//颜色函数
+.text-color(@color) {
+  color: @color !important;
+  a&:hover,
+  a&:focus {
+    color: darken(@color, 10%) !important;
+  }
+}
+//left right top bottom 1~@length px
+.loop(@length,left,left,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,right,right,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,top,top,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,bottom,bottom,@margin-padding-spacing,@margin-padding-unit) ;
+
+//margin-top,margin-left,margin-right,margin-bottom 1~@length px
+.loop(@length,mt,margin-top,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,ml,margin-left,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,mr,margin-right,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,mb,margin-bottom,@margin-padding-spacing,@margin-padding-unit) ;
+
+
+//padding-top,padding-left,padding-right,padding-bottom 1~@length px
+.loop(@length,pt,padding-top,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,pl,padding-left,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,pr,padding-right,@margin-padding-spacing,@margin-padding-unit) ;
+.loop(@length,pb,padding-bottom,@margin-padding-spacing,@margin-padding-unit) ;
+
+//width,height
+.loop(@length,w,width,@width-height-spacing,@width-height-unit) ;
+.loop(@length,h,height,@width-height-spacing,@width-height-unit) ;
+.loop(@length,lh,line-height,@width-height-spacing,@width-height-unit) ;
+
+//字体大小
+.loop(50,ft,font-size,1,1rem);
+.loop2(50,ftn,font-size,1,1px);
+html,body{
+  font-family: "Arial", "Hiragino Sans GB", "微软雅黑", "黑体-简", "Helvetica", "sans-serif" !important;
+}
+.wc{width: 100% !important;}
+.hc{height: 100% !important;}
+a:link,a:hover,a:active,a:visited{ text-decoration: none;outline:none;}
+.p-rel{position:relative !important;}
+.p-abs{position:absolute !important;}
+.p-stc{position:static !important;}
+.p-fix{position:fixed !important;}
+.ovh{overflow: hidden !important;}
+.dib{display:inline-block !important;}
+.vm{vertical-align:middle !important;}
+.vt{vertical-align:top !important;}
+.vtt{vertical-align:text-top !important;}
+.vb{vertical-align:bottom !important;}
+.vtb{vertical-align:text-bottom !important;}
+.mauto{margin-left:auto !important;margin-right:auto !important;}
+.cp{cursor:pointer;}
+.dn{display:none;}
+/*省略*/
+.ellipsis{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+
+/*颜色*/
+/*白色*/
+/*蓝色*/
+.text-blue{
+    .text-color(#3998fb) ;
+}
+.text-red{
+  .text-color(#ea6262) ;
+}
+/*灰蓝*/
+.text-gblue{
+  .text-color(#c1d5e2) ;
+}
+.text-blue2{
+    .text-color(#9dc8e4);
+}
+/*浅灰色*/
+.text-grey1{
+    .text-color(#808080);
+}
+/*灰色*/
+.text-grey2{
+    .text-color(#9f9fa0);
+}
+/*深灰色*/
+.text-grey3{
+    .text-color(#363e48);
+}
+/*褐色*/
+.text-brown{
+    .text-color(#22262b);
+}
+/*浅褐色*/
+.text-shallow-brown{
+    .text-color(#363e48);
+}
+/*黄色*/
+.text-orange{
+   .text-color(#ff9047);
+}
+

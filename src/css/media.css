@@ -1,0 +1,21 @@
+/* 
+* @Author: Marte
+* @Date:   2017-07-11 16:02:47
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-11 16:03:53
+*/
+@media only screen and (min-device-width: 319px) {
+    html{
+        font-size:50px;
+    }
+}
+@media only screen and (min-device-width: 410px) {
+    html{
+        font-size:70px;
+    }
+}
+@media only screen and (min-device-width: 767px) {
+    html{
+        font-size:80px;
+    }
+}

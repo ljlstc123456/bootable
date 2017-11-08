@@ -1,0 +1,87 @@
+/*
+* @Author: Marte
+* @Date:   2017-07-11 15:58:11
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-11-08 17:13:10
+*/
+.scale-1px,.scale-1px-top,.scale-1px-left,.scale-1px-right,.scale-1px-bottom{
+  position: relative;
+}
+.scale-1px-top:before,.scale-1px-left:before,.scale-1px-right:before,.scale-1px-bottom:before{
+  content: '';
+  position: absolute;
+  background: #ccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+.scale-1px:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+.scale-1px-top:before{
+    left:0;
+    top:0;
+    width:100%;
+    height:1px;
+}
+.scale-1px-left:before{
+    left:0;
+    top:0;
+    height:100%;
+    width:1px;
+}
+.scale-1px-right:before{
+    right:0;
+    top:0;
+    height:100%;
+    width:1px;
+}
+.scale-1px-bottom:before{
+    bottom:0;
+    left:0;
+    width:100%;
+    height:1px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .scale-1px-top:before,.scale-1px-bottom:before{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+    .scale-1px-left:before,.scale-1px-right:before{
+        -webkit-transform: scaleX(0.5);
+        transform: scaleX(0.5);
+    }
+    .scale-1px:before{
+        width: 200%;
+      height: 200%;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .scale-1px-top:before,.scale-1px-bottom:before{
+        -webkit-transform: scaleY(0.33);
+        transform: scaleY(0.33);
+    }
+    .scale-1px-left:before,.scale-1px-right:before{
+        -webkit-transform: scaleX(0.33);
+        transform: scaleX(0.33);
+    }
+    .scale-1px:before{
+      width: 300%;
+      height: 300%;
+      -webkit-transform: scale(0.33);
+      transform: scale(0.33);
+    }
+}
