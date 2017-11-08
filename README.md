@@ -96,25 +96,25 @@ col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 *入标注left:40px。那么就用 left40*
 
 #### 位置大小 
->.left0~left50-------left:*     
-.top0~top50---------top:*       
-.right0~right50-----right:*     
-.bottom0~bottom50---bottom:*
+>.left0 ~ .left50-------left:*     
+.top0 ~ .top50---------top:*       
+.right0 ~ .right50-----right:*     
+.bottom0 ~ .bottom50---bottom:*
 
 #### 外边距大小 
->.mt0~mt50-----------margin-top:*   
-.ml0~ml50-----------margin-left:*   
-.mr0~mr50-----------margin-right:*      
-.mb0~mb50-----------margin-bottom:*     
+>.mt0 ~ .mt50 ----------- margin-top:*   
+.ml0 ~ .ml50 ----------- margin-left:*   
+.mr0 ~ .mr50 -----------margin-right:*      
+.mb0 ~ .mb50-----------margin-bottom:*     
 #### 内边距大小 
->.pl0~pl50-----------padding-left:*     
-.pr0~pr50-----------padding-right:*     
-.pt0~pt50-----------padding-top:*       
-.pb0~pb50-----------padding-bottom:*        
+>.pl0 ~ .pl50-----------padding-left:*     
+.pr0 ~ .pr50-----------padding-right:*     
+.pt0 ~ .pt50-----------padding-top:*       
+.pb0 ~ .pb50-----------padding-bottom:*        
 #### 宽、高、行高距大小（以 5 为间隔） 
->.w0,w5,w10~w250-----width:*    
-.h0,h5,h10~h250-----height:*  
-.lh0,lh5~lh250------line-height:*  
+>.w0,.w5,.w10 ~ .w250-----width:*    
+.h0,.h5,.h10 ~ .h250-----height:*  
+.lh0,.lh5 ~ .lh250------line-height:*  
 
 *eg:设置一个宽200，高100，上内边距20，左内边距20的div。*
 ```html
