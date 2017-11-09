@@ -6,7 +6,7 @@ col-xs-\*, col-sm-\*, col-md-\*, col-lg-\*,
 col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 
 **如下图所示：**  
-![Alt text](dist/img/pxtorem.png)
+![Alt text](dist/img/table-img.png)
 
 
 > *这些都是可以使用的
@@ -44,7 +44,8 @@ col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 ## ***2. UI设计尺寸和rem的约定***
 
 **UI设计稿按照750像素设计,如下图**  
-![](http://zs.igemi.cn/pages/viewpage.action?pageId=5080888&preview=/5080888/5080885/image2017-7-12%209%3A33%3A3.png)
+
+![Alt text](dist/img/pxtorem.png)
 
 ### 字体和尺寸我们的约定是：
 - 对于iphone 6s以下的尺寸（device-width在320px~375px之间），统一按照iphone 6s的字体大小和布局高度。  
@@ -117,9 +118,13 @@ col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 .h0,.h5,.h10 ~ .h250-----height:*  
 .lh0,.lh5 ~ .lh250------line-height:*  
 
-*eg:设置一个宽200，高100，上内边距20，左内边距20的div。*
+*eg:设置一个宽200，高100，上内边距20，左内边距20的div。*     
+
+如下图:    
+![Alt text](dist/img/div-class.png)
+
 ```html
-    <div class="w200 h100 pt20 pl20"></div>
+<div class="w200 h100 pt20 pl20"></div>
 ```
 
 ## ***4. table-cell布局***
@@ -127,7 +132,7 @@ col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 
 #### **bootable提供 *div-table*和*div-table-cell*来满足这种布局**
 如下图:    
-![](http://zs.igemi.cn/pages/viewpage.action?pageId=5080888&preview=/5080888/5080887/image2017-7-12%209%3A33%3A48.png)
+![Alt text](dist/img/input.png)
 
 *代码如下：*
 ```html
