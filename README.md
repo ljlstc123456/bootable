@@ -6,7 +6,7 @@ col-xs-\*, col-sm-\*, col-md-\*, col-lg-\*,
 col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 
 **如下图所示：**  
-![](http://zs.igemi.cn/download/attachments/5080888/image2017-7-12%209%3A32%3A22.png?version=1&modificationDate=1499823362000&api=v2)
+![Alt text](dist/img/pxtorem.png)
 
 
 > *这些都是可以使用的
