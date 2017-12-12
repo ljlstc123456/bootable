@@ -1,0 +1,120 @@
+{
+
+  "attention_seekers": [
+    "bounce:0",
+    "flash:0",
+    "pulse:0",
+    "rubberBand:0",
+    "shake:0",
+    "headShake:0",
+    "swing:0",
+    "tada:0",
+    "wobble:0",
+    "jello:0"
+  ],
+
+  "bouncing_entrances": [
+    "bounceIn:0",
+    "bounceInDown:0",
+    "bounceInLeft:0",
+    "bounceInRight:0",
+    "bounceInUp:0"
+  ],
+
+  "bouncing_exits": [
+    "bounceOut:0",
+    "bounceOutDown:0",
+    "bounceOutLeft:0",
+    "bounceOutRight:0",
+    "bounceOutUp:0"
+  ],
+
+  "fading_entrances": [
+    "fadeIn:0",
+    "fadeInDown:0",
+    "fadeInDownBig:0",
+    "fadeInLeft:0",
+    "fadeInLeftBig:0",
+    "fadeInRight:0",
+    "fadeInRightBig:0",
+    "fadeInUp:0",
+    "fadeInUpBig:0"
+  ],
+
+  "fading_exits": [
+    "fadeOut:0",
+    "fadeOutDown:0",
+    "fadeOutDownBig:0",
+    "fadeOutLeft:0",
+    "fadeOutLeftBig:0",
+    "fadeOutRight:0",
+    "fadeOutRightBig:0",
+    "fadeOutUp:0",
+    "fadeOutUpBig:0"
+  ],
+
+  "flippers": [
+    "flip:0",
+    "flipInX:0",
+    "flipInY:0",
+    "flipOutX:0",
+    "flipOutY:0"
+  ],
+
+  "lightspeed": [
+    "lightSpeedIn:0",
+    "lightSpeedOut:0"
+  ],
+
+  "rotating_entrances": [
+    "rotateIn:0",
+    "rotateInDownLeft:0",
+    "rotateInDownRight:0",
+    "rotateInUpLeft:0",
+    "rotateInUpRight:0"
+  ],
+
+  "rotating_exits": [
+    "rotateOut:0",
+    "rotateOutDownLeft:0",
+    "rotateOutDownRight:0",
+    "rotateOutUpLeft:0",
+    "rotateOutUpRight:0"
+  ],
+
+  "specials": [
+    "hinge:0",
+    "rollIn:0",
+    "rollOut:0"
+  ],
+
+  "zooming_entrances": [
+    "zoomIn:0",
+    "zoomInDown:0",
+    "zoomInLeft:0",
+    "zoomInRight:0",
+    "zoomInUp:0"
+  ],
+
+  "zooming_exits": [
+    "zoomOut:0",
+    "zoomOutDown:0",
+    "zoomOutLeft:0",
+    "zoomOutRight:0",
+    "zoomOutUp:0"
+  ],
+
+  "sliding_entrances": [
+    "slideInDown:0",
+    "slideInLeft:0",
+    "slideInRight:0",
+    "slideInUp:0"
+  ],
+
+  "sliding_exits": [
+    "slideOutDown:0",
+    "slideOutLeft:0",
+    "slideOutRight:0",
+    "slideOutUp:0"
+  ]
+}
