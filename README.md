@@ -155,13 +155,9 @@ cnpm install
 *由于没有缩放viewport，统一采用1：1*
 *所以在drp为2或者3的屏幕中1像素的边框会很粗，我们提供:*
 >.scale-1px
-
 >.scale-1px-top,
-
 >.scale-1px-left,
-
 >.scale-1px-right,
-
 >.scale-1px-bottom
 
 ## ***6. 整合animate.css***
