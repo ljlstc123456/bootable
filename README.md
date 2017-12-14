@@ -89,45 +89,71 @@ col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 
 ## ***3. 原子化css类，提高开发效率***
 ### bootable提供了一系列常用的css类，可以直接应用于元素
->.wc-------------width: 100%
->.hc-------------height: 100%
->.p-rel----------position:relative
->.p-abs----------position:absolute
->.p-stc----------position:static
->.p-fix----------position:fixed
->.ovh------------overflow: hidden
->.dib------------display:inline-block
->.vm-------------vertical-align:middle
->.vt-------------vertical-align:top
->.vtt------------vertical-align:text-top
->.vb-------------vertical-align:bottom
->.vtb------------vertical-align:text-bottom
->.mauto----------margin-left:auto;margin-right:auto
->.dn-------------display:none
+.wc-------------width: 100%
+
+.hc-------------height: 100%
+
+.p-rel----------position:relative
+
+.p-abs----------position:absolute
+
+.p-stc----------position:static
+
+.p-fix----------position:fixed
+
+.ovh------------overflow: hidden
+
+.dib------------display:inline-block
+
+.vm-------------vertical-align:middle
+
+.vt-------------vertical-align:top
+
+.vtt------------vertical-align:text-top
+
+.vb-------------vertical-align:bottom
+
+.vtb------------vertical-align:text-bottom
+
+.mauto----------margin-left:auto;margin-right:auto
+
+.dn-------------display:none
 
 ### 以下的单位均是转换成rem的，所以UI图标注是多少，这里就是多少。
 *如标注left:40px。那么就用 left40*
 
 #### 位置大小
->.left0 ~ .left50-------left:*
->.top0 ~ .top50---------top:*
->.right0 ~ .right50-----right:*
->.bottom0 ~ .bottom50---bottom:*
+.left0 ~ .left50-------left:*
+
+.top0 ~ .top50---------top:*
+
+.right0 ~ .right50-----right:*
+
+.bottom0 ~ .bottom50---bottom:*
 
 #### 外边距大小
->.mt0 ~ .mt50 ----------- margin-top:*
->.ml0 ~ .ml50 ----------- margin-left:*
->.mr0 ~ .mr50 -----------margin-right:*
->.mb0 ~ .mb50-----------margin-bottom:*
+.mt0 ~ .mt50 ----------- margin-top:*
+
+.ml0 ~ .ml50 ----------- margin-left:*
+
+.mr0 ~ .mr50 -----------margin-right:*
+
+.mb0 ~ .mb50-----------margin-bottom:*
+
 #### 内边距大小
->.pl0 ~ .pl50-----------padding-left:*
->.pr0 ~ .pr50-----------padding-right:*
->.pt0 ~ .pt50-----------padding-top:*
->.pb0 ~ .pb50-----------padding-bottom:*
+.pl0 ~ .pl50-----------padding-left:*
+
+.pr0 ~ .pr50-----------padding-right:*
+
+.pt0 ~ .pt50-----------padding-top:*
+
+.pb0 ~ .pb50-----------padding-bottom:*
 #### 宽、高、行高距大小（以 5 为间隔）
->.w0,.w5,.w10 ~ .w250-----width:*
->.h0,.h5,.h10 ~ .h250-----height:*
->.lh0,.lh5 ~ .lh250------line-height:*
+.w0,.w5,.w10 ~ .w250-----width:*
+
+.h0,.h5,.h10 ~ .h250-----height:*
+
+.lh0,.lh5 ~ .lh250------line-height:*
 
 *eg:设置一个宽200，高100，上内边距20，左内边距20的div。*
 
@@ -156,17 +182,24 @@ col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 ## ***5. 1px边框的展示***
 *由于没有缩放viewport，统一采用1：1*
 *所以在drp为2或者3的屏幕中1像素的边框会很粗，我们提供:*
->.scale-1px
->.scale-1px-top,
->.scale-1px-left,
->.scale-1px-right,
->.scale-1px-bottom
+.scale-1px
+
+.scale-1px-top,
+
+.scale-1px-left,
+
+.scale-1px-right,
+
+.scale-1px-bottom
 
 ## ***6. 整合animate.css***
 动画源码来自：https://daneden.github.io/animate.css/
 1.按需编译
+
 ![Alt text](dist/img/animate-config0.png)
+
 ![Alt text](dist/img/animate-config1.png)
+
 把需要用到的动画，改为1  再编译
 
 ```shell
@@ -183,7 +216,7 @@ ps：这里推荐一个wow.js  配合animate.css 非常好用：[animate.css+wow
 
 ## ***6. bootable优缺点***
 
-> 优点：简洁高效，从  *bootstrap*  衍生而来。字体与布局采用同一个单位，排版统一。对于大屏幕设备字体支持良好。
+>优点：简洁高效，从  *bootstrap*  衍生而来。字体与布局采用同一个单位，排版统一。对于大屏幕设备字体支持良好。
 
 >缺点：不支持pc端，没有采用  flex  布局用  table-cell  布局代替，不确定性能。
 
