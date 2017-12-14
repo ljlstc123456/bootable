@@ -194,6 +194,7 @@ col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 
 ## ***6. 整合animate.css***
 动画源码来自：https://daneden.github.io/animate.css/
+
 1.按需编译
 
 ![Alt text](dist/img/animate-config0.png)
