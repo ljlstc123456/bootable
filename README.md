@@ -10,8 +10,10 @@ grunt build
 
 ## ***1. 继承bootstrap栅栏系统***
 
-container, container-fluid, row,
+>container, container-fluid, row,
+
 col-xs-\*, col-sm-\*, col-md-\*, col-lg-\*,
+
 col-xs-offset-\*, col-sm-offset-\*, col-md-offset-\*, col-lg-offset-\*
 
 **如下图所示：**
