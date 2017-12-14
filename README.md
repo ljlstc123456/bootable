@@ -214,13 +214,13 @@ grunt build
 
 ps：这里推荐一个wow.js  配合animate.css 非常好用：[animate.css+wow.js这对好基友](http://www.myjscode.com/page/article23.html)
 
-## ***6. bootable优缺点***
+## ***7. bootable优缺点***
 
 >优点：简洁高效，从  *bootstrap*  衍生而来。字体与布局采用同一个单位，排版统一。对于大屏幕设备字体支持良好。
 
 >缺点：不支持pc端，没有采用  flex  布局用  table-cell  布局代替，不确定性能。
 
-## ***7. bootable后续***
+## ***8. bootable后续***
 
-这里只集成了核心的css，后续会增加很多我们在实际开发者用到的很多插件，比如 **animate.css** 等。
+
 # 敬请期待...
